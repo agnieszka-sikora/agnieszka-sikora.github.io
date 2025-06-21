@@ -17,7 +17,7 @@
 
         header {
             background: rgba(255,255,255,0.95);
-            padding: 2.5rem 0 1.5rem 0;
+            padding: 2rem 0 1.2rem 0;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             border-bottom: 1px solid #f6d365;
@@ -26,34 +26,84 @@
         h1 {
             margin: 0;
             color: #333;
-            font-size: 2.7rem;
+            font-size: 2.5rem;
             font-weight: 700;
             letter-spacing: 1px;
         }
 
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 800px;
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 2rem;
+            max-width: 1100px;
+            width: 100%;
             margin: 2.5rem auto 2rem auto;
+            flex: 1;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.85);
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 2rem 1.2rem;
+            min-width: 180px;
+            height: fit-content;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-bottom: 1.2rem;
+        }
+
+        nav a {
+            color: #fda085;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #f6d365;
+        }
+
+        main {
             background: #fff;
             border-radius: 16px;
             box-shadow: 0 4px 24px rgba(0,0,0,0.10);
             padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+
+        section {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #fda085;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
         }
 
         p {
             color: #444;
-            font-size: 1.18rem;
+            font-size: 1.13rem;
             line-height: 1.7;
-            margin-bottom: 2rem;
+            margin-bottom: 0.7rem;
         }
 
         .button {
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             padding: 0.85rem 2.2rem;
             background: #fda085;
             color: #fff;
@@ -83,10 +133,23 @@
             margin-top: 2rem;
         }
 
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            nav {
+                margin-bottom: 1.5rem;
+                min-width: unset;
+            }
+        }
+
         @media (max-width: 600px) {
+            .container {
+                margin: 1.2rem 0.5rem;
+            }
             main {
                 padding: 1.2rem 0.7rem;
-                margin: 1.2rem 0.5rem;
             }
             h1 {
                 font-size: 2rem;
@@ -103,25 +166,73 @@
     <header>
         <h1>Introduction</h1>
     </header>
-    <main>
-        <p>
-            The courses I took in the Computer Science program at SNHU provided me with a solid foundation in various computer science concepts and skills. I have demonstrated proficiency in programming languages, algorithms, data structures, and software development by working on different projects and assignments. Each completed course has contributed to my knowledge base and allowed me to apply theoretical concepts to practical problems, highlighting my ability to solve complex issues.
-Completing my coursework in the computer science program has been instrumental in shaping my professional goals and values, especially in my journey toward becoming a data analyst. Through courses focused on data structures, statistical analysis, database management, and machine learning, I have gained a profound understanding of collecting, analyzing, and interpreting data to extract meaningful insights. This knowledge has sharpened my technical skills and clarified my passion for using data to address real-world challenges.
-My exposure to data-centric projects during the program has fostered a strong analytical mindset. These projects often required identifying patterns, uncovering trends, and presenting data-driven recommendations, which solidified my interest in pursuing a career in data analysis. They have also instilled in me the values of precision, critical thinking, and ethical responsibility—key qualities for a data analyst to ensure that insights are accurate and responsibly applied.
-My coursework also provided extensive exposure to database technologies, including both SQL and NoSQL systems. Through hands-on projects, I gained experience in designing, implementing, and managing relational databases and working with non-relational databases suited for unstructured data. This dual expertise enabled me to understand when to leverage structured query languages for scenarios requiring consistency and reliability, and when to use NoSQL solutions for scalability and flexibility. These skills have been pivotal in strengthening my ability to handle diverse datasets effectively, ensuring that data is stored, retrieved, and analyzed efficiently to support decision-making processes.
-Additionally, collaborating on group assignments has underscored the significance of teamwork and effective communication in professional growth. As a data analyst, I understand that interpreting complex datasets and presenting findings clearly and impactfully is essential for influencing decisions. These experiences have shaped my goal to excel technically and serve as a bridge between raw data and actionable strategies, ensuring that my work leads to meaningful outcomes.
-This preparation has also instilled in me the confidence to navigate the ever-evolving landscape of the computer science field. The program's rigorous curriculum and diverse coursework have ensured that I am well-versed in foundational principles and adaptable to emerging technologies and trends. For instance, exposure to advanced topics such as artificial intelligence, cybersecurity, and cloud computing has broadened my technical repertoire, positioning me as a versatile candidate ready to tackle multifaceted challenges.
-Alongside technical skills, the program has fostered essential soft skills such as critical thinking, adaptability, and effective communication. These competencies are crucial in computer science, where collaboration among multidisciplinary teams and the ability to articulate complex ideas are often vital to driving innovation. By participating in projects replicating real-world scenarios, I have gained valuable experience balancing technical execution with strategic planning, ensuring that solutions are functional and aligned with broader organizational goals.
-Ultimately, this thorough preparation has instilled in me a mindset of lifelong learning, which is a cornerstone of success in a field defined by rapid technological advances. Whether attending conferences, earning certifications, or exploring personal projects, I am dedicated to staying at the forefront of innovation to ensure my skills remain relevant and impactful. This combination of technical expertise, practical experience, and a proactive approach to growth guarantees that I am well-prepared to enter and thrive in the dynamic world of computer science.
-
-This ePortfolio serves as a comprehensive showcase of my work and achievements. The selected artifacts highlight my strengths by providing tangible evidence of my skills, demonstrating my ability to apply knowledge to real-world challenges, and emphasizing my growth and development as a computer science professional. Furthermore, the ePortfolio has been a vital tool in bridging the gap between academic accomplishments and professional aspirations. Presenting a curated selection of my projects provides clear evidence of my ability to deliver results. Each entry in the portfolio tells a story of problem-solving, creativity, and perseverance, reinforcing my readiness to contribute meaningfully to the computer science field.
-
-        </p>
-        <a href="#" class="button">Get Started</a>
-    </main>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#foundation">Foundation</a></li>
+                <li><a href="#data-analyst">Data Analyst Journey</a></li>
+                <li><a href="#database">Database Experience</a></li>
+                <li><a href="#teamwork">Teamwork & Communication</a></li>
+                <li><a href="#adaptability">Adaptability</a></li>
+                <li><a href="#portfolio">ePortfolio</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="foundation">
+                <h2>Solid Foundation</h2>
+                <p>
+                    The courses I took in the Computer Science program at SNHU provided me with a solid foundation in various computer science concepts and skills. I have demonstrated proficiency in programming languages, algorithms, data structures, and software development by working on different projects and assignments. Each completed course has contributed to my knowledge base and allowed me to apply theoretical concepts to practical problems, highlighting my ability to solve complex issues.
+                </p>
+            </section>
+            <section id="data-analyst">
+                <h2>Data Analyst Journey</h2>
+                <p>
+                    Completing my coursework in the computer science program has been instrumental in shaping my professional goals and values, especially in my journey toward becoming a data analyst. Through courses focused on data structures, statistical analysis, database management, and machine learning, I have gained a profound understanding of collecting, analyzing, and interpreting data to extract meaningful insights. This knowledge has sharpened my technical skills and clarified my passion for using data to address real-world challenges.
+                </p>
+                <p>
+                    My exposure to data-centric projects during the program has fostered a strong analytical mindset. These projects often required identifying patterns, uncovering trends, and presenting data-driven recommendations, which solidified my interest in pursuing a career in data analysis. They have also instilled in me the values of precision, critical thinking, and ethical responsibility—key qualities for a data analyst to ensure that insights are accurate and responsibly applied.
+                </p>
+            </section>
+            <section id="database">
+                <h2>Database Experience</h2>
+                <p>
+                    My coursework also provided extensive exposure to database technologies, including both SQL and NoSQL systems. Through hands-on projects, I gained experience in designing, implementing, and managing relational databases and working with non-relational databases suited for unstructured data. This dual expertise enabled me to understand when to leverage structured query languages for scenarios requiring consistency and reliability, and when to use NoSQL solutions for scalability and flexibility. These skills have been pivotal in strengthening my ability to handle diverse datasets effectively, ensuring that data is stored, retrieved, and analyzed efficiently to support decision-making processes.
+                </p>
+            </section>
+            <section id="teamwork">
+                <h2>Teamwork & Communication</h2>
+                <p>
+                    Additionally, collaborating on group assignments has underscored the significance of teamwork and effective communication in professional growth. As a data analyst, I understand that interpreting complex datasets and presenting findings clearly and impactfully is essential for influencing decisions. These experiences have shaped my goal to excel technically and serve as a bridge between raw data and actionable strategies, ensuring that my work leads to meaningful outcomes.
+                </p>
+            </section>
+            <section id="adaptability">
+                <h2>Adaptability & Lifelong Learning</h2>
+                <p>
+                    This preparation has also instilled in me the confidence to navigate the ever-evolving landscape of the computer science field. The program's rigorous curriculum and diverse coursework have ensured that I am well-versed in foundational principles and adaptable to emerging technologies and trends. For instance, exposure to advanced topics such as artificial intelligence, cybersecurity, and cloud computing has broadened my technical repertoire, positioning me as a versatile candidate ready to tackle multifaceted challenges.
+                </p>
+                <p>
+                    Alongside technical skills, the program has fostered essential soft skills such as critical thinking, adaptability, and effective communication. These competencies are crucial in computer science, where collaboration among multidisciplinary teams and the ability to articulate complex ideas are often vital to driving innovation. By participating in projects replicating real-world scenarios, I have gained valuable experience balancing technical execution with strategic planning, ensuring that solutions are functional and aligned with broader organizational goals.
+                </p>
+                <p>
+                    Ultimately, this thorough preparation has instilled in me a mindset of lifelong learning, which is a cornerstone of success in a field defined by rapid technological advances. Whether attending conferences, earning certifications, or exploring personal projects, I am dedicated to staying at the forefront of innovation to ensure my skills remain relevant and impactful.
+                </p>
+            </section>
+            <section id="portfolio">
+                <h2>ePortfolio</h2>
+                <p>
+                    This ePortfolio serves as a comprehensive showcase of my work and achievements. The selected artifacts highlight my strengths by providing tangible evidence of my skills, demonstrating my ability to apply knowledge to real-world challenges, and emphasizing my growth and development as a computer science professional.
+                </p>
+                <p>
+                    Furthermore, the ePortfolio has been a vital tool in bridging the gap between academic accomplishments and professional aspirations. Presenting a curated selection of my projects provides clear evidence of my ability to deliver results. Each entry in the portfolio tells a story of problem-solving, creativity, and perseverance, reinforcing my readiness to contribute meaningfully to the computer science field.
+                </p>
+                <a href="#" class="button">Get Started</a>
+            </section>
+        </main>
+    </div>
     <footer>
         &copy; 2025 Agnieszka Sikora. All rights reserved.
     </footer>
 </body>
 </html>
+
 
