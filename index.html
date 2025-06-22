@@ -179,6 +179,7 @@
                 <li><a href="#portfolio">ePortfolio</a></li>
                 <li><a href="#enhancement-one">Enhancement One: Software Design and Engineering</a></li>
                 <li><a href="#enhancement-two">Enhancement Two: Algorithms and Data Structure</a></li>
+                <li><a href="#enhancement-three">Enhancement Three: Databases</a></li>
             </ul>
         </nav>
         <main>
@@ -271,6 +272,15 @@
                 </p>
                 <p>
                     During the enhancement, I learned that checking the code in small increments is essential to pinpoint errors or issues. Testing the entire code only after it’s created makes it almost impossible to figure out what is wrong if it doesn't work. The main problem I encountered when updating the artifact was that the map was not updating. However, the issue was fixed after ensuring that the callback used the correct column names.
+                </p>
+            </section>
+            <section id="enhancement-three">
+                <h2>Enhancement Three: Databases</h2>
+                <p>
+                    For the third enhancement, I continued working on the same artifact I selected for the second enhancement. I decided to work on this artifact because dashboards can provide a holistic view of data. Since I plan on working as a data analyst, I believe that knowledge of dashboards will benefit me. Through this artifact, I showcased my strong foundation in Python programming and my ability to structure the dashboard’s components using Dash’s layout system. I also showed my ability to implement interactivity through callbacks and integration with the database. The improvements I made in this artifact included the implementation of register and login functionality and adding “register” and “login” buttons. Access to the data is restricted for users who didn’t register; only logged-in users can view and interact with the animal dashboard. Data is accessed and manipulated via the CRUD operations. All user and animal data are managed via MongoDB through the Animal Shelter class. Potential vulnerabilities are addressed, for example, through input validation, which checks that the username and password are not empty. Passwords are hashed using SHA-256 with a static salt. Unique usernames are forced with a MongoDB unique index. Error handling catches exceptions and returns error messages. The enhancements were manually tested: duplicate usernames were not allowed, and login attempts only succeeded with correct credentials. 
+                </p>
+                <p>
+                    As I improved the artifact, I learned how to connect to the MongoDB database. The artifact was originally created in Apporto, and Linux Shell was used to connect to the database. While I didn’t have significant issues moving the artifact to work on my computer, I did run into problems when trying to connect to the database. It took me a lot of trial and error to figure out how to make it work. I needed a connection string obtained from MongoDB, which was then used with a MongoDB client to establish a connection. 
                 </p>
             </section>
         </main>
