@@ -178,6 +178,7 @@
                 <li><a href="#data-structure">Data Structures, Algorithms and Software Engineering</a></li>
                 <li><a href="#portfolio">ePortfolio</a></li>
                 <li><a href="#enhancement-one">Enhancement One: Software Design and Engineering</a></li>
+                <li><a href="#enhancement-two">Enhancement Two: Algorithms and Data Structure</a></li>
             </ul>
         </nav>
         <main>
@@ -254,7 +255,22 @@
                     The first improvement was to change the texture of the cone bushes. Previously, they blended with the grass, but now, with the better texture choice, they are distinct in the image. I also changed the texture of the grass, which now looks more like real grass. Another improvement was adding background color, which makes the picture more realistic than when the background color was black. I also improved the lighting of the scene. I reduced the point lights from 3 to 2. The previous point lights made the scene slightly uncomfortable, and the light was too bright. The warm glow and subtle backlight make the objects more transparent, and the scene looks better overall. I also fixed the texture deletion by replacing glGenTextures with glDeleteTextures to free textures. In CreateGLTexture, I added a check for texture array overflow. I replaced NULL pointers with nullptr since it improves type safety and code clarity. The code's integrity is ensured by correctly checking m_loadedTextures >= 16 before writing to m_texture IDs, preventing buffer overflows. Another example of code integrity is in the destructor, where I set m_basicMeshes and m_pShaderManager to nullptr after using them.
                 </p>
                 <p>
-                    Even though I didn’t have significant problems when creating the code during my original class, the enhancement part was challenging. The major problem I faced was making the code work. The image would initially load, but the code had difficulties locating the correct library paths. Once I started updating the paths, the last update would usually cause the code to stop running. Finally, it worked when I started debugging the issues in small increments. I ensured the compiler’s include paths were correctly configured to point to the OpenGL header files' directories. I added the parent directory to the include path in my compiler settings. I also ensured that the linker can find the OpenGL library files. It involved setting the “Additional Library Directories” in my project settings to the path where these library files reside.
+                    Even though I did not have significant problems when creating the code during my original class, the enhancement part was challenging. The major problem I faced was making the code work. The image would initially load, but the code had difficulties locating the correct library paths. Once I started updating the paths, the last update would usually cause the code to stop running. Finally, it worked when I started debugging the issues in small increments. I ensured the compiler’s include paths were correctly configured to point to the OpenGL header files' directories. I added the parent directory to the include path in my compiler settings. I also ensured that the linker can find the OpenGL library files. It involved setting the “Additional Library Directories” in my project settings to the path where these library files reside.
+                </p>
+            </section>
+            <section id="enhancement-two">
+                <h2>Enhancement Two: Algorithms and Data Structure</h2>
+                <p>
+                    The second artifact I chose for the enhancement was created during the CS 340: Advanced Programming Concepts course. The project aimed to develop a software application to identify and categorize available dogs for search-and-rescue missions from existing data. 
+                </p>
+                <p>
+                    I believe that being able to create interactive dashboards to manipulate data, gain insight, and customize visualizations is an essential skill for a data analyst, a career I want to pursue. Implementing algorithms for efficiently sorting and filtering the dataset based on user input showcases my understanding of algorithms. My interactive dashboard loads and updates data efficiently to ensure a smooth user experience, showcasing my understanding of optimized data retrieval to ensure responsiveness. By leveraging Dash’s callback functions, I demonstrated the ability to design efficient algorithms that handle the interactions and update the display in real-time. 
+                </p>
+                <p>
+                    The project was successfully moved from Apporto and Linux Shell to the local computer. I improved the dashboard by changing the radio buttons to a drop-down list, making it more visually pleasing. To reduce clutter, I made three columns: “datetime”, “monthyear”, and “outcome_subtype” invisible during display while retaining them in the underlying data structure. I also added a toggle function, which allows users to focus on the essential information, enhancing user experience and simplifying navigation—the checklist dcc.Checklist lets users select which columns to show. The callback for hidden_columns computes which columns to hide by comparing all columns to the selected one and always hiding those in ALWAYS_HIDDEN. The app is interactive thanks to using callbacks. Each callback updates part of the UI in response to user actions, for example, update_dashboard updates the data table based on the selected rescue type filter. I added try/except blocks to improve defensive programming to catch and display errors in update_dashboard.
+                </p>
+                <p>
+                    During the enhancement, I learned that checking the code in small increments is essential to pinpoint errors or issues. Testing the entire code only after it’s created makes it almost impossible to figure out what is wrong if it doesn't work. The main problem I encountered when updating the artifact was that the map was not updating. However, the issue was fixed after ensuring that the callback used the correct column names.
                 </p>
             </section>
         </main>
